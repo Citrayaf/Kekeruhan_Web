@@ -9,14 +9,14 @@ $(function () {
     // ============================================================== 
     // Sales overview
     // ============================================================== 
-     new Chartist.Line('#sales-overview2', {
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+     new Chartist.Line('#curah_hujan', {
+        labels: ['15:20','15:30','15:40','15:50']
         , series: [
-          {meta:"Earning ($)", data: [0, 150, 110, 240, 200, 200, 300, 200, 380, 300, 400, 380]}
+          {meta:"Curah Hujan", data: [23,97,25,98]}
       ]
     }, {
         low: 0
-        , high:400
+        , high:100
         , showArea: true
         , divisor: 10
         , lineSmooth:false
@@ -39,7 +39,154 @@ $(function () {
             , showGrid: true
             , offset: 10,
             labelInterpolationFnc: function(value) {
-		      return (value / 100) + 'k'
+		      return (value ) 
+		    },
+
+        }
+        
+    });
+
+    new Chartist.Line('#kekeruhan', {
+      labels: ['15:20','15:30','15:40','15:50']
+      , series: [
+        {meta:"Kekeruhan", data: [10,67,34,89]}
+    ]
+  }, {
+      low: 0
+      , high:100
+      , showArea: true
+      , divisor: 10
+      , lineSmooth:false
+      , fullWidth: true
+      , showLine: true
+      , chartPadding: 30
+      , axisX: {
+          showLabel: true
+          , showGrid: false
+          , offset: 50
+      }
+      , plugins: [
+        Chartist.plugins.tooltip()
+      ], 
+      // As this is axis specific we need to tell Chartist to use whole numbers only on the concerned axis
+      axisY: {
+        onlyInteger: true
+          , showLabel: true
+          , scaleMinSpace: 50 
+          , showGrid: true
+          , offset: 10,
+          labelInterpolationFnc: function(value) {
+        return (value ) 
+      },
+
+      }
+      
+  });
+
+  new Chartist.Line('#suhu', {
+        labels: ['15:20','15:30','15:40','15:50']
+        , series: [
+          {meta:"Temperatur", data: [36,22,28,21]}
+      ]
+    }, {
+        low: 0
+        , high:100
+        , showArea: true
+        , divisor: 10
+        , lineSmooth:false
+        , fullWidth: true
+        , showLine: true
+        , chartPadding: 30
+        , axisX: {
+            showLabel: true
+            , showGrid: false
+            , offset: 50
+        }
+        , plugins: [
+        	Chartist.plugins.tooltip()
+      	], 
+      	// As this is axis specific we need to tell Chartist to use whole numbers only on the concerned axis
+        axisY: {
+        	onlyInteger: true
+            , showLabel: true
+            , scaleMinSpace: 50 
+            , showGrid: true
+            , offset: 10,
+            labelInterpolationFnc: function(value) {
+		      return (value ) 
+		    },
+
+        }
+        
+    });
+    new Chartist.Line('#tegangan', {
+        labels: ['15:20','15:30','15:40','15:50']
+        , series: [
+          {meta:"Volt", data: [30,27,31,28]}
+      ]
+    }, {
+        low: 0
+        , high:100
+        , showArea: true
+        , divisor: 10
+        , lineSmooth:false
+        , fullWidth: true
+        , showLine: true
+        , chartPadding: 30
+        , axisX: {
+            showLabel: true
+            , showGrid: false
+            , offset: 50
+        }
+        , plugins: [
+        	Chartist.plugins.tooltip()
+      	], 
+      	// As this is axis specific we need to tell Chartist to use whole numbers only on the concerned axis
+        axisY: {
+        	onlyInteger: true
+            , showLabel: true
+            , scaleMinSpace: 50 
+            , showGrid: true
+            , offset: 10,
+            labelInterpolationFnc: function(value) {
+		      return (value ) 
+		    },
+
+        }
+        
+    });
+    
+    new Chartist.Line('#sales-overview2', {
+        labels: ['15:20','15:30','15:40','15:50']
+        , series: [
+          {meta:"Earning ($)", data: [23,97,25,98]}
+      ]
+    }, {
+        low: 0
+        , high:100
+        , showArea: true
+        , divisor: 10
+        , lineSmooth:false
+        , fullWidth: true
+        , showLine: true
+        , chartPadding: 30
+        , axisX: {
+            showLabel: true
+            , showGrid: false
+            , offset: 50
+        }
+        , plugins: [
+        	Chartist.plugins.tooltip()
+      	], 
+      	// As this is axis specific we need to tell Chartist to use whole numbers only on the concerned axis
+        axisY: {
+        	onlyInteger: true
+            , showLabel: true
+            , scaleMinSpace: 50 
+            , showGrid: true
+            , offset: 10,
+            labelInterpolationFnc: function(value) {
+		      return (value ) 
 		    },
 
         }
