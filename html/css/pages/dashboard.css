@@ -16,8 +16,74 @@ File: scss
 /*Normal Color*/
 /*Extra Variable*/
 /*******************
+
+
+
+
  Sales overview Chart
 *******************/
+
+#curah_hujan .ct-point {
+  stroke-width: 6px;
+  stroke: #398bf7; }
+
+#curah_hujan .ct-grid {
+  stroke-dasharray: 0px;
+  stroke: rgba(120, 130, 140, 0.13); }
+
+#curah_hujan .ct-area {
+  fill-opacity: 0; }
+
+#curah_hujan .ct-line {
+  stroke-width: 3px;
+  stroke: #398bf7; }
+
+  /*****/
+  #kekeruhan .ct-point {
+    stroke-width: 6px;
+    stroke: #398bf7; }
+  
+  #kekeruhan .ct-grid {
+    stroke-dasharray: 0px;
+    stroke: rgba(120, 130, 140, 0.13); }
+  
+  #kekeruhan .ct-area {
+    fill-opacity: 0; }
+  
+  #kekeruhan .ct-line {
+    stroke-width: 3px;
+    stroke: #398bf7; }
+/*****/
+#sales-overview2 .ct-point {
+  stroke-width: 6px;
+  stroke: #398bf7; }
+
+#sales-overview2 .ct-grid {
+  stroke-dasharray: 0px;
+  stroke: rgba(120, 130, 140, 0.13); }
+
+#sales-overview2 .ct-area {
+  fill-opacity: 0; }
+
+#sales-overview2 .ct-line {
+  stroke-width: 3px;
+  stroke: #398bf7; }
+/*****/
+#sales-overview2 .ct-point {
+  stroke-width: 6px;
+  stroke: #398bf7; }
+
+#sales-overview2 .ct-grid {
+  stroke-dasharray: 0px;
+  stroke: rgba(120, 130, 140, 0.13); }
+
+#sales-overview2 .ct-area {
+  fill-opacity: 0; }
+
+#sales-overview2 .ct-line {
+  stroke-width: 3px;
+  stroke: #398bf7; }
+
 #sales-overview2 .ct-point {
   stroke-width: 6px;
   stroke: #398bf7; }

@@ -4,6 +4,37 @@ Author: Wrappixel
 Email: niravjoshi87@gmail.com
 File: js
 */
+
+
+var tday=["Sun","Mon","Tue","Wed","Thur","Fri","Sat"];
+var tmonth=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function GetClock(){
+var d=new Date();
+var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
+var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds(),ap;
+
+if(nhour==0){ap=" AM";nhour=12;}
+else if(nhour<12){ap=" AM";}
+else if(nhour==12){ap=" PM";}
+else if(nhour>12){ap=" PM";nhour-=12;}
+
+if(nmin<=9) nmin="0"+nmin;
+
+var clocktext="<span style=\"font:40pt Arial; color:#06d79c;\" >"+nhour+":"+nmin+""+ap+"</span> <br> <span style=\"font:20pt Arial; color:#ccccff;\">"+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+"</span>";
+
+document.getElementById('clockbox').innerHTML=clocktext;
+}
+
+GetClock();
+setInterval(GetClock,1000);
+
+
+
+
+
+
+
 $(function () {
     "use strict";
     // ============================================================== 
@@ -29,7 +60,28 @@ $(function () {
             , offset: 50
         }
         , plugins: [
-        	Chartist.plugins.tooltip()
+        	Chartist.plugins.tooltip(),
+          Chartist.plugins.ctAxisTitle({
+            axisX: {
+              axisTitle: 'Waktu',
+              axisClass: 'ct-axis-title',
+              offset: {
+                x: 0,
+                y: 50
+              },
+              textAnchor: 'middle'
+            },
+            axisY: {
+              axisTitle: 'mm',
+              axisClass: 'ct-axis-title',
+              offset: {
+                x: 10,
+                y: 12.5
+              },
+              textAnchor: 'middle',
+              flipTitle: true
+            }
+          })
       	], 
       	// As this is axis specific we need to tell Chartist to use whole numbers only on the concerned axis
         axisY: {
@@ -42,7 +94,9 @@ $(function () {
 		      return (value ) 
 		    },
 
-        }
+        },
+        
+
         
     });
 
@@ -66,7 +120,29 @@ $(function () {
           , offset: 50
       }
       , plugins: [
-        Chartist.plugins.tooltip()
+        Chartist.plugins.tooltip(),
+        Chartist.plugins.ctAxisTitle({
+          axisX: {
+            axisTitle: 'Waktu',
+            axisClass: 'ct-axis-title',
+            offset: {
+              x: 0,
+              y: 50
+            },
+            textAnchor: 'middle'
+          },
+          axisY: {
+            axisTitle: 'NTU',
+            axisClass: 'ct-axis-title',
+            offset: {
+              x: 10,
+              y: 12.5
+            },
+            textAnchor: 'middle',
+            flipTitle: true
+          }
+        })
+      
       ], 
       // As this is axis specific we need to tell Chartist to use whole numbers only on the concerned axis
       axisY: {
@@ -103,7 +179,28 @@ $(function () {
             , offset: 50
         }
         , plugins: [
-        	Chartist.plugins.tooltip()
+        	Chartist.plugins.tooltip(),
+          Chartist.plugins.ctAxisTitle({
+            axisX: {
+              axisTitle: 'Waktu',
+              axisClass: 'ct-axis-title',
+              offset: {
+                x: 0,
+                y: 50
+              },
+              textAnchor: 'middle'
+            },
+            axisY: {
+              axisTitle: 'Celcius',
+              axisClass: 'ct-axis-title',
+              offset: {
+                x: 10,
+                y: 12.5
+              },
+              textAnchor: 'middle',
+              flipTitle: true
+            }
+          })
       	], 
       	// As this is axis specific we need to tell Chartist to use whole numbers only on the concerned axis
         axisY: {
@@ -139,7 +236,28 @@ $(function () {
             , offset: 50
         }
         , plugins: [
-        	Chartist.plugins.tooltip()
+        	Chartist.plugins.tooltip(),
+          Chartist.plugins.ctAxisTitle({
+            axisX: {
+              axisTitle: 'Waktu',
+              axisClass: 'ct-axis-title',
+              offset: {
+                x: 0,
+                y: 50
+              },
+              textAnchor: 'middle'
+            },
+            axisY: {
+              axisTitle: 'US/m',
+              axisClass: 'ct-axis-title',
+              offset: {
+                x: 10,
+                y: 12.5
+              },
+              textAnchor: 'middle',
+              flipTitle: true
+            }
+          })
       	], 
       	// As this is axis specific we need to tell Chartist to use whole numbers only on the concerned axis
         axisY: {
